@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SearchBar from './SearchBar';
+import SearchBar from './SearchBar/SearchBar'
 import WeatherDisplay from './WeatherDisplay';
 
 export default function WeatherApp() {
@@ -22,7 +22,7 @@ export default function WeatherApp() {
         }
     }
     return (
-        <div>
+        <div className='container'>
             <SearchBar onSearch={fetchWeatherData} />
             {error && <p style={{ color: 'red' }}>{error}</p>}
             {weatherData && <WeatherDisplay data={weatherData} />}

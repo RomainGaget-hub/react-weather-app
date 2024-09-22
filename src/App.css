@@ -1,0 +1,59 @@
+header {
+    background-color: #282c34;
+    min-height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    font-size: 1.5em;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+  color: #61dafb;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start; /* Align items at the top */
+  align-items: center; /* Center items horizontally */
+  flex-direction: column;
+  background-color: #f0f2f5;
+  padding-top: 50px; /* Add padding to push the content down */
+  height: 100vh; /* Take full height of the viewport */
+}
+
+

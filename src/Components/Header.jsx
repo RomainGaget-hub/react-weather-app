@@ -5,7 +5,10 @@ export default function Header() {
         <header>
             <h1>Weather App</h1>
             <nav>
-                <Link to="/">Current Weather</Link> | <Link to="/forecast">Hourly Forecast</Link>
+                <ul className="nav-list">
+                    <li className="nav-item"><Link to="/">Current Weather</Link></li>
+                    <li className="nav-item"><Link to="/forecast">Hourly Forecast</Link></li>
+                </ul>
             </nav>
         </header>
     );
