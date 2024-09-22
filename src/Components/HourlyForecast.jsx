@@ -51,15 +51,24 @@ function HourlyForecast() {
 
             {forecastData && (
                 <div>
-                    <h2>Hourly Temperatures</h2>
-                    <ul>
+                <h2>Hourly Temperatures</h2>
+                <table id="forecast-table">
+                    <thead>
+                        <tr>
+                            <th>Hour</th>
+                            <th>Temperature (°C)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
                         {forecastData.map((temp, index) => (
-                            <li key={index}>
-                                Hour {index}: {temp}°C
-                            </li>
+                            <tr key={index}>
+                                <td>{index}</td>
+                                <td>{temp}°C</td>
+                            </tr>
                         ))}
-                    </ul>
-                </div>
+                    </tbody>
+                </table>
+            </div>
             )}
         </div>
     );
