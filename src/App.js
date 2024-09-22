@@ -1,15 +1,19 @@
-
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Components/Header';
-import SearchBar from './Components/SearchBar';
-import WeatherDisplay from './Components/WeatherDisplay';
+import WeatherApp from './Components/WeatherApp';
+import HourlyForecast from './Components/HourlyForecast';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <SearchBar />
-      <WeatherDisplay />
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<WeatherApp />} />
+          <Route path="/forecast" element={<HourlyForecast />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
