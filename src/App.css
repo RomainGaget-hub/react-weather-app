@@ -91,3 +91,40 @@ header a:hover {
 }
 
 
+/*HourlyForecast.js */
+
+#hourly-forecast-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#forecast-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#latitude-input,
+#longitude-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#latitude-input:focus,
+#longitude-input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+

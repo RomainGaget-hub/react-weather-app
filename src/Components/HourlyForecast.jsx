@@ -30,16 +30,18 @@ function HourlyForecast() {
     };
 
     return (
-        <div>
-            <h2>Hourly Temperature Forecast</h2>
+        <div id='hourly-forecast-container'>
+            <h2 id="forecast-title">Hourly Temperature Forecast</h2>
             <input
                 type="text"
+                id="latitude-input"
                 placeholder="Enter Latitude"
                 value={latitude}
                 onChange={(e) => setLatitude(e.target.value)}
             />
             <input
                 type="text"
+                id="longitude-input"
                 placeholder="Enter Longitude"
                 value={longitude}
                 onChange={(e) => setLongitude(e.target.value)}
@@ -51,24 +53,24 @@ function HourlyForecast() {
 
             {forecastData && (
                 <div>
-                <h2>Hourly Temperatures</h2>
-                <table id="forecast-table">
-                    <thead>
-                        <tr>
-                            <th>Hour</th>
-                            <th>Temperature (°C)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {forecastData.map((temp, index) => (
-                            <tr key={index}>
-                                <td>{index}</td>
-                                <td>{temp}°C</td>
+                    <h2>Hourly Temperatures</h2>
+                    <table id="forecast-table">
+                        <thead>
+                            <tr>
+                                <th>Hour</th>
+                                <th>Temperature (°C)</th>
                             </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
+                        </thead>
+                        <tbody>
+                            {forecastData.map((temp, index) => (
+                                <tr key={index}>
+                                    <td>{index}</td>
+                                    <td>{temp}°C</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
             )}
         </div>
     );
