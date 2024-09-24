@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CoordinateGenerator from './CoordinateGenerator';
+import './HourlyForecasts.css';
 
 function HourlyForecast() {
     // Internal state to handle the input fields

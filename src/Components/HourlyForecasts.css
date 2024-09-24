@@ -1,0 +1,93 @@
+#forecast-table {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  #forecast-table th, #forecast-table td {
+    padding: 15px;
+    text-align: left;
+  }
+  
+  #forecast-table th {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+  }
+  
+  #forecast-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  #forecast-table tr:hover {
+    background-color: #e9e9e9;
+  }
+  
+  #forecast-table td {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  
+  /*HourlyForecast.js */
+  
+  #hourly-forecast-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 12px auto;
+  }
+  
+  #forecast-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  #latitude-input,
+  #longitude-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  #latitude-input:focus,
+  #longitude-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  

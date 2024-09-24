@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SearchBar from './SearchBar/SearchBar'
 import WeatherDisplay from './WeatherDisplay';
+import './WeatherApp.css';
 
 export default function WeatherApp() {
     const [weatherData, setWeatherData] = useState(null);
@@ -22,10 +23,18 @@ export default function WeatherApp() {
         }
     }
     return (
-        <div className='container'>
-            <SearchBar onSearch={fetchWeatherData} />
-            {error && <p style={{ color: 'red' }}>{error}</p>}
-            {weatherData && <WeatherDisplay data={weatherData} />}
+        <div className='weather-app-container'>
+            <div className='search-section'>
+                <SearchBar onSearch={fetchWeatherData} />
+            </div>
+            <div className='error-section'>
+                {error && <p className='error-message'>{error}</p>}
+            </div>
+            {weatherData && (
+                <div className='weather-display-section'>
+                    <WeatherDisplay data={weatherData} />
+                </div>
+            )}
         </div>
     );
 }
